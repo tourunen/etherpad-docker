@@ -20,9 +20,6 @@ RUN cd /opt && git clone https://github.com/ether/etherpad-lite.git etherpad
 # Install node dependencies
 RUN /opt/etherpad/bin/installDeps.sh
 
-# Add conf files
-ADD settings.json /opt/etherpad/settings.json
-
 EXPOSE 9001
 
 # non-root user needs to be able create api key and install plugins on the first run
@@ -31,3 +28,7 @@ RUN chmod -R 777 /opt/etherpad
 # skip supervisord in this deployment
 WORKDIR /opt/etherpad
 CMD ["node", "node_modules/ep_etherpad-lite/node/server.js"]
+
+# Add conf files
+ADD settings.json /opt/etherpad/settings.json
+RUN chmod -R 777 /opt/etherpad/settings.json
