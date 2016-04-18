@@ -23,3 +23,5 @@ Then edit the settings.json to your liking and run:
 `docker build -t <YOUR_USERNAME>/etherpad-docker .`
 
 This image could also be used as a base for Docker Etherpad images integrated with MySQL, etc.
+
+testing 1-2-3
