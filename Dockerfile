@@ -29,6 +29,9 @@ RUN chmod -R 777 /opt/etherpad
 WORKDIR /opt/etherpad
 CMD ["node", "node_modules/ep_etherpad-lite/node/server.js"]
 
+RUN ln -sf /secrets/apikey.txt /opt/etherpad/APIKEY.txt
+RUN ln -sf /secrets/sessionkey.txt /opt/etherpad/SESSIONKEY.txt
+
 # Add conf files
 ADD settings.json /opt/etherpad/settings.json
 RUN chmod -R 777 /opt/etherpad/settings.json
