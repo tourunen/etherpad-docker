@@ -46,7 +46,7 @@
                     "user"    : "etherpad",
                     "host"    : "mysql",
                     "password": "etherpad",
-                    "database": "etherpad-lite"
+                    "database": "etherpaddb"
                   },
 
   //the default text of a pad
