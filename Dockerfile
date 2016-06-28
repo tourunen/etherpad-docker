@@ -7,7 +7,7 @@
 # Version 1.0
 
 # Use Docker's nodejs, which is based on ubuntu
-FROM node:latest
+FROM node:5
 MAINTAINER John E. Arnold, iohannes.eduardus.arnold@gmail.com
 
 # Get Etherpad-lite's other dependencies
